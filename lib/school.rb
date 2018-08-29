@@ -1,32 +1,27 @@
 require'pry'
 
 class School
-
-  @@roster = {}
+  attr_accessor :roster
 
   def initialize(name)
     @name = name
     # @roster = {}
   end
 
-  def roster
-    @@roster
-  end
-
   def add_student(name, grade)
-    if self.roster[grade]
+    if @roster[grade]
       #binding.pry
-      self.roster[grade] << name
+      @roster[grade] << name
       #self.roster[9] = 'mike'
       # that creates {9: ['some name','mike']}
     else
-      self.roster[grade] = [name]
+      @roster[grade] = [name]
       #{6:['name','other name'], 9:['mike']}
     end
   end
 
   def grade(grade)
-    self.roster[grade]
+    @roster[grade]
   end
 
 end
