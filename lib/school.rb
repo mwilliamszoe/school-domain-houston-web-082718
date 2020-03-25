@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require'pry'
 
 class School
@@ -39,3 +40,28 @@ end
 
 # school.grade(9)
 # => ["Zach Morris", "AC Slater"]
+=======
+# code here!
+class School
+  
+  def initialize(name)
+    @name
+    @roster = {}
+  end
+  
+  def add_student(name, grade)
+    if roster[grade] != nil
+      roster[grade] << name
+    else
+      roster[grade] = name
+    end
+  end
+  
+  def grade(grade)
+    @roster[grade]
+  end
+  
+  def sort
+  end
+end
+>>>>>>> 6f47115f950ae5ab5209f43ba686909401840589
